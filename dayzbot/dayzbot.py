@@ -10,7 +10,7 @@ def press_f_times(count):
         keyboard.press('f')
         time.sleep(0.05)
         keyboard.release('f')
-        time.sleep(1.0) 
+        time.sleep(0.8) 
 
 def hold_f(seconds):
     keyboard.press('f')
@@ -42,18 +42,18 @@ def start_bot(status_callback=None):
     try:
         while bot_running:
             
-            hold_f(7.3)
+            hold_f(6.6)
             if not bot_running:
                 break
                 
-            digit_counters[0] += 10
+            digit_counters[0] += 9
             press_f_times(1)
             
             if not bot_running:
                 break
                 
             press_f_times(3)
-            hold_f(1.7)
+            hold_f(1.6)
             
             if not bot_running:
                 break
@@ -64,29 +64,29 @@ def start_bot(status_callback=None):
             if not bot_running:
                 break
             
-            if digit_counters[1] >= 10:
+            if digit_counters[1] >= 9:
                 digit_counters[1] = 0
                 
                 press_f_times(3)
-                hold_f(1.7)
+                hold_f(1.6)
                 digit_counters[2] += 1
                 press_f_times(1)
                 
                 if not bot_running:
                     break
                 
-                if digit_counters[2] >= 10:
+                if digit_counters[2] >= 9:
                     digit_counters[2] = 0
                     
                     press_f_times(3)
-                    hold_f(1.7)
+                    hold_f(1.6)
                     digit_counters[3] += 1
                     press_f_times(1)
                     
                     if not bot_running:
                         break
                     
-                    if digit_counters[3] >= 10:
+                    if digit_counters[3] >= 9:
                         digit_counters[3] = 0
                         press_f_times(1)
                     else:
